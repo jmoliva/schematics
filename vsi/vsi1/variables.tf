@@ -19,7 +19,7 @@ variable "ssh_public_key" {
 
 # IBM Cloud API Key - update this via environment variable within the DevOps pipeline
 # For more information, please see the README
-variable "ibm_cloud_api_key" {
+variable "ibmcloud_api_key" {
 	default = "ibmcloudapikey"
 }
 
