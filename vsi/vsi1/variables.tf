@@ -2,8 +2,8 @@
 # Find a list of available datacenters here:
 # https://www.ibm.com/cloud-computing/bluemix/data-centers
 variable "datacenter" {
-  description = "Paris"
-  default = "par01"
+  description = "Frankfurt"
+  default = "fra02"
 }
 
 # SSH Label - this does not need to be changed
@@ -14,7 +14,7 @@ variable "ssh_label" {
 # SSH Public Key - update this via environment variable within the DevOps pipeline
 # For more information, please see the README
 variable "ssh_public_key" {
-	default = "uc3_vsi_pub_key"
+	default = "pipeline_vsi_pub_key"
 }
 
 # IBM Cloud API Key - update this via environment variable within the DevOps pipeline
@@ -39,5 +39,5 @@ variable "ibm_sl_username" {
 # Update this via environment variable within the DevOps pipeline
 # For more information, please see the README
 variable "vi_instance_name" {
-	default = "vmx"
+	default = "jmo-vmx"
 }

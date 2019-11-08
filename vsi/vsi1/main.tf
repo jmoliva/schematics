@@ -25,9 +25,9 @@ resource "ibm_compute_ssh_key" "ssh_key_gip" {
 
 resource "ibm_compute_vm_instance" "vm1" {
     hostname = "${var.vi_instance_name}"
-    domain = "bp2i.uc3.cloud"
+    domain = "monjmo.com"
     os_reference_code = "REDHAT_LATEST_64"
-    datacenter = "par01"
+    datacenter = "${var.datacenter}"
     network_speed = 100
     hourly_billing = true
     private_network_only = true
@@ -35,7 +35,7 @@ resource "ibm_compute_vm_instance" "vm1" {
     memory = 1024
     disks = [25]
     local_disk = false
-    private_vlan_id = 2125107
+    # private_vlan_id = 2125107
     ssh_key_ids = [
         "${ibm_compute_ssh_key.ssh_key_gip.id}"
     ]
