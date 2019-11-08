@@ -1,11 +1,15 @@
 # Default Data Center for the creation of the Virtual Instance
 variable "vsi_datacenter" {
-  description="Frankfurt"
-  default="fra02"
+  type        = "string"
+  description = "Enter the data center that you want to deploy your Kubernetes cluster in."
+  default = "fra02"
+
 }
 
 # Name of the Virtual Server Instance
 variable "vsi_instance_name" {
-  description="Name of the instance"
-  default="vsi-jmo-1"
+  type        = "string"
+  description = "Enter the name of the instance"
+  default = "vsi-jmo-1"
+
 }

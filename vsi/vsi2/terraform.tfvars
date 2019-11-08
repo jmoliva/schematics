@@ -5,9 +5,3 @@ iaas_classic_api_key = ""
 
 # Enter your IBM Cloud API Key, you can get your IBM Cloud API key using: https://cloud.ibm.com/iam#/apikeys
 ibmcloud_api_key = ""
-
-# Enter the Data Center for the creation of the Virtual Instance
-vsi_datacenter = ""
-
-# Enter the name of the Virtual Server Instance
-vsi_instance_name = ""
