@@ -13,3 +13,10 @@ variable "vsi_instance_name" {
   default = "vsi-jmo-1"
 
 }
+
+# Name of the Virtual Server Instance
+variable "vsi_memory" {
+  description = "Enter the memory of the instance"
+  default = 1024
+
+}

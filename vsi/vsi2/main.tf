@@ -9,7 +9,7 @@ resource "ibm_compute_vm_instance" "vm1" {
   hourly_billing       = true
   private_network_only = true
   cores                = 1
-  memory               = 1024
+  memory               = "${var.vsi_memory}"
   disks                = [25]
   local_disk           = false
 }
