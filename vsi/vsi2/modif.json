@@ -1,18 +1,81 @@
 {
+  "id": "vsi2-f2e86c4c-af83-4e",
   "name": "vsi2",
   "type": [
     "terraform-v1.0"
   ],
+  "description": "build a vsi",
+  "tags": [],
+  "created_at": "2019-11-08T16:20:15.466363241Z",
+  "created_by": "jean-michel.oliva@fr.ibm.com",
+  "status": "ACTIVE",
+  "workspace_status": {
+    "frozen": false,
+    "locked": false
+  },
+  "template_repo": {
+    "url": "https://github.com/jmoliva/schematics",
+    "branch": "master"
+  },
   "template_data": [
     {
-      "folder": ".",
+      "id": "vsi2-2ea1e9b4-7ed9-4b",
+      "folder": "vsi/vsi2",
       "type": "terraform-v1.0",
+      "values_url": "https://schematics.cloud.ibm.com/v1/workspaces/vsi2-f2e86c4c-af83-4e/template_data/vsi2-2ea1e9b4-7ed9-4b/values",
+      "values": "",
+      "values_metadata": [
+        {
+          "description": "Enter the user name to access IBM Cloud classic infrastructure. You can retrieve the user name by following the instructions for retrieving your classic infrastructure API key.",
+          "name": "iaas_classic_username",
+          "type": "string"
+        },
+        {
+          "description": "Enter the API key to access IBM Cloud classic infrastructure. For more information for how to create an API key and retrieve it, see [Managing classic infrastructure API keys](https://cloud.ibm.com/docs/iam?topic=iam-classic_keys).",
+          "name": "iaas_classic_api_key",
+          "type": "string"
+        },
+        {
+          "description": "Enter your IBM Cloud API Key, you can get your IBM Cloud API key using: https://cloud.ibm.com/iam#/apikeys",
+          "name": "ibmcloud_api_key",
+          "type": "string"
+        },
+        {
+          "default": "fra02",
+          "description": "Enter the data center that you want to deploy your Kubernetes cluster in.",
+          "name": "vsi_datacenter",
+          "type": "string"
+        },
+        {
+          "default": "vsi-jmo-1",
+          "description": "Enter the name of the instance",
+          "name": "vsi_instance_name",
+          "type": "string"
+        },
+        {
+          "default": "1024",
+          "description": "Enter the memory of the instance",
+          "name": "vsi_memory",
+          "type": "string"
+        }
+      ],
       "variablestore": [
         {
-          "name": "vsi_instance_name",
-          "value": "vsi-jmo-2"
+          "name": "vsi_memory",
+          "value": "2048"
         }
       ]
     }
-  ]
+  ],
+  "runtime_data": [
+    {
+      "id": "vsi2-2ea1e9b4-7ed9-4b",
+      "engine_name": "terraform",
+      "engine_version": "v0.11.14",
+      "state_store_url": "https://schematics.cloud.ibm.com/v1/workspaces/vsi2-f2e86c4c-af83-4e/runtime_data/vsi2-2ea1e9b4-7ed9-4b/state_store",
+      "log_store_url": "https://schematics.cloud.ibm.com/v1/workspaces/vsi2-f2e86c4c-af83-4e/runtime_data/vsi2-2ea1e9b4-7ed9-4b/log_store"
+    }
+  ],
+  "shared_data": {},
+  "updated_at": "0001-01-01T00:00:00Z"
 }
